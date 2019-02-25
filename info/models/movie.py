@@ -1,8 +1,7 @@
-from django.contrib.postgres.fields import JSONField
-from django.db import models
-
 # Create your models here.
 import datetime
+
+from django.db import models
 from rest_framework.compat import MinValueValidator
 
 
@@ -44,8 +43,8 @@ class Movie(models.Model):
                               blank=True)
     poster = models.TextField(null=True,
                               blank=True)
-    ratings = JSONField(null=True,
-                        blank=True)
+    ratings = models.TextField(null=True,
+                               blank=True)
     metascore = models.CharField(max_length=64,
                                  null=True,
                                  blank=True)
@@ -86,5 +85,3 @@ class Movie(models.Model):
             return self.comments.filter(created__lte=to_date, created__gte=from_date).count()
         else:
             return self.comments.all().count()
-
-
