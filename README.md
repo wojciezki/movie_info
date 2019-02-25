@@ -6,41 +6,41 @@ Application gathers additional information about movie based on movie title
 
 For download:
 
-'''
+```
 git clone https://github.com/wojciezki/movie_info.git
-'''
+```
 
 ### Prerequisites
 
 Installing and activate virtualenv:
 
-'''
+```
 python3.6 -m venv venv_movies
 . venv_movies/bin/activate
-'''
+```
 
 Installing packages:
 
-'''
+```
 cd movie_info
 pip install -r requirements.txt
-'''
+```
 
 ## Running application
 
 In application root folder type (in terminal)
 
-'''
+```
 python manage.py runserver
-'''
+```
 
 ## Running the tests
 
 To run test type in terminal in app root folder:
 
-'''
+```
 python manage.py test
-'''
+```
 
 ## Filtering options
 
